@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Inventario</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Inventario</h1>
+        <div class="header">
+            <button id="settings-button">⚙️</button>
+            <button id="profile-button" class="profile-btn">●</button>
+        </div>
+        <div id="access-container">
+            <input type="text" id="access-code" placeholder="Introduce el código" />
+            <button id="login-button">Entrar</button>
+        </div>
+        <div class="button-container" style="display: none;">
+            <button id="logout-button">Salir</button>
+        </div>
+        <form id="inventory-form" style="display: none;">
+            <input type="text" id="item-name" placeholder="Nombre del artículo" required>
+            <input type="number" id="item-quantity" placeholder="Cantidad" required>
+            <button type="submit">Agregar Artículo</button>
+        </form>
+        <table id="inventory-table" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Nombre del Artículo</th>
+                    <th>Cantidad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los artículos se agregarán aquí -->
+            </tbody>
+        </table>
+
+        <!-- Panel de configuración -->
+        <div id="settings-panel" style="display: none;">
+            <h2>Configuraciones</h2>
+            <div>
+                <label>
+                    <input type="checkbox" id="dark-mode-toggle">
+                    Modo Oscuro
+                </label>
+            </div>
+            <div>
+                <label for="font-size-slider">Tamaño de Letra:</label>
+                <input type="range" id="font-size-slider" min="10" max="30" value="16">
+            </div>
+            <div>
+                <label for="font-family-select">Tipo de Letra:</label>
+                <select id="font-family-select">
+                    <option value="Arial">Arial</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Verdana">Verdana</option>
+                </select>
+            </div>
+            <p>Para más información, contáctame en: <strong>mtzb509@gmail.com</strong></p>
+        </div>
+
+        <!-- Panel de perfil -->
+        <div id="profile-panel" style="display: none;">
+            <h2>Perfil</h2>
+            <p>Teléfono: <strong>8996323858</strong></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
